@@ -24,11 +24,13 @@ describe('Basic Functionality', function() {
       expect(input.text()).to.equal('');
     });
     it('initializes with a value', function() {
-      var input = new Input('Joe');
+      var input = new Input();
+      input.init('Joe');
       expect(input.text()).to.equal('Joe');
     });
     it('initializes with a value and a range', function() {
-      var input = new Input('Joe Taylor', {
+      var input = new Input();
+      input.init('Joe Taylor', {
         start: 3,
         length: 7
       });
